@@ -10,6 +10,6 @@ OR
 
 ##TODO
 
-+Author picture
-+Showing only the active form
-+Multiple authors/themes in a lecture
++ Author picture
++ Showing only the active form
++ Multiple authors/themes in a lecture
