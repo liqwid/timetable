@@ -2,7 +2,7 @@ var ThemeForm = React.createClass({
     // Сброка данных формы в объект и передача его для отправки на сервер
     handleTheme: function (e){
         e.preventDefault();
-        var action = id ? 'Edit' : 'Add';
+        var action = this.props.destId ? 'Edit' : 'Add';
         var title = React.findDOMNode(this.refs.themeTitle).value.trim();
         var description = React.findDOMNode(this.refs.description).value.trim();
         var _id=1;

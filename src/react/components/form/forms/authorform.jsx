@@ -2,7 +2,7 @@ var AuthorForm = React.createClass({
     // Сброка данных формы в объект и передача его для отправки на сервер
     handleAuthor: function(e){
         e.preventDefault();
-        var action = id ? 'Edit' : 'Add';
+        var action = this.props.destId ? 'Edit' : 'Add';
         var name = React.findDOMNode(this.refs.authorName).value.trim();
         var lastname = React.findDOMNode(this.refs.authorLast).value.trim();
         var fathersname = React.findDOMNode(this.refs.authorFathers).value.trim();

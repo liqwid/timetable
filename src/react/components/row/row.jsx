@@ -55,8 +55,8 @@ var Row = React.createClass({
 
         return (
             <tr>
-                <ul>{authorlines}</ul>
-                <ul>{themelines}</ul>
+                <td>{authorlines}</td>
+                <td>{themelines}</td>
                 <td><Line
                     entity = "Lecture"
                     onClick = {this.props.onClick}

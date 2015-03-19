@@ -79,8 +79,8 @@ var Row = React.createClass({displayName: "Row",
 
         return (
             React.createElement("tr", null, 
-                React.createElement("ul", null, authorlines), 
-                React.createElement("ul", null, themelines), 
+                React.createElement("td", null, authorlines), 
+                React.createElement("td", null, themelines), 
                 React.createElement("td", null, React.createElement(Line, {
                     entity: "Lecture", 
                     onClick: this.props.onClick, 
@@ -149,7 +149,7 @@ var AuthorForm = React.createClass({displayName: "AuthorForm",
     // Сброка данных формы в объект и передача его для отправки на сервер
     handleAuthor: function(e){
         e.preventDefault();
-        var action = id ? 'Edit' : 'Add';
+        var action = this.props.destId ? 'Edit' : 'Add';
         var name = React.findDOMNode(this.refs.authorName).value.trim();
         var lastname = React.findDOMNode(this.refs.authorLast).value.trim();
         var fathersname = React.findDOMNode(this.refs.authorFathers).value.trim();
@@ -521,7 +521,7 @@ var ThemeForm = React.createClass({displayName: "ThemeForm",
     // Сброка данных формы в объект и передача его для отправки на сервер
     handleTheme: function (e){
         e.preventDefault();
-        var action = id ? 'Edit' : 'Add';
+        var action = this.props.destId ? 'Edit' : 'Add';
         var title = React.findDOMNode(this.refs.themeTitle).value.trim();
         var description = React.findDOMNode(this.refs.description).value.trim();
         var _id=1;
@@ -667,6 +667,7 @@ var TimeTable = React.createClass({displayName: "TimeTable",
             success: function(data){
                 this.setState({data:data});
                 this.setState({dataLoaded: true});
+                console.log(data);
             }.bind(this),
             error: function(xhr, status, err) {
                 console.error(this.props.url, status, err.toString());
