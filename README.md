@@ -1,15 +1,7 @@
 # Timetable
 An interactive timetable of a conference
 
-## Install
-+ Run npm install
+## Run
+In console run node webpack either specify a port or it will be automaticaly set to 1234.
 
-+ Run gulp: it automaticly starts a server and opens a page in a browser(may require a refresh)
-OR
-+ Run node app.js: default port is 4444
-
-##TODO
-
-+ Author picture
-+ Showing only the active form
-+ Multiple authors/themes in a lecture
+Browser local storage is used instead of back-end API so any person can check the project running without installing a database.
